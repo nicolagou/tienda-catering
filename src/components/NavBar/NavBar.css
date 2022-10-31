@@ -1,0 +1,33 @@
+.menu-navbar-container{
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../../assets/fondo-gris.jpg);
+    background-size: inherit;
+    height: 90px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: baseline;
+}
+
+.menu-title{
+    margin-left: 10px;
+    color: white;
+    font-size: 35px;
+}
+
+.menu-items{
+list-style-type: none;
+display: flex;
+flex-direction: row;
+margin-right: 250px;
+}
+
+.menu-list{
+display: flex;
+justify-content: space-between;
+text-decoration: none;
+color: white;
+font-size: 20px;
+margin-left: 30px;
+
+}
