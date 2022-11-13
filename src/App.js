@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <NavBar/>
-      <ItemListContainer name="Bienvenidos a mi tienda online"/>
+      <ItemListContainer/>
       </>
       );
 }
