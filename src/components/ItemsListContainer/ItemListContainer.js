@@ -17,11 +17,8 @@ const ItemListContainer = () => {
       getProducts.then((respuesta)=>{
         setProductList(respuesta);
       });
-      setTimeout(() => {
-console.log(productList);        
-      }, 4000);
       // eslint-disable-next-line
-  }, [productList]);
+  }, []);
 
   return (
     <div className='message-greeting-container'> 
