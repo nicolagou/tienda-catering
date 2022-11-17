@@ -6,7 +6,6 @@ const CartWidget = () => {
     return (
         <div className='menu-navbar__logo'>
             <img className='menu-navbar__img' src={logo} alt="cart widget"/>
-            <h3>1</h3>
     </div>
     )
 }
