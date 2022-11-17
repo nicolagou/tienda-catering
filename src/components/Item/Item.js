@@ -1,4 +1,5 @@
 
+
 import './Item.css';
 
 const Item = ({producto}) => {
@@ -8,6 +9,7 @@ const Item = ({producto}) => {
         <h2>Tipo: {producto.tipo}</h2>
         <h2>Especificacion: {producto.especificacion}</h2>
         <h2>Comensales: {producto.comensales}</h2>
+        
     </div>
   )
 }

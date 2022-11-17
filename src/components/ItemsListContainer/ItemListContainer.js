@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { data } from '../../data/data';
-import ItemCount from '../ItemCount/ItemCount';
+
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
 
@@ -24,7 +24,7 @@ const ItemListContainer = () => {
     <div className='message-greeting-container'> 
         {/* <h2 className='message'>{props.name}</h2> */}
         <ItemList productList={productList}/>
-        <ItemCount/>
+        
     </div>    
   )
 }
