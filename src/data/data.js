@@ -2,40 +2,40 @@ export const data = [
     {
         id:1,
         nombre: "Menu1",
-        tipo: "Desayuno",
-        especificacion: "General",
+        tipo: "General",
+        categoria: 'almuerzos',
         comensales: 5,
     },
 
     {
         id:2,
         nombre: "Menu2",
-        tipo: "Merienda",
-        especificacion: "General",
+        tipo: "General",
+        categoria: "almuerzos",
         comensales: 5,
     },
 
     {
         id:3,
         nombre: "Menu3",
-        tipo: "Merienda",
-        especificacion: "Celiacos",
+        tipo: "Celiacos",
+        categoria: "desayunos",
         comensales: 5,
     },
 
     {
         id:4,
         nombre: "Menu4",
-        tipo: "Cena",
-        especificacion: "General",
+        tipo: "General",
+        categoria: "desayunos",
         comensales: 5,
     },
 
     {
         id:5,
         nombre: "Menu5",
-        tipo: "Almuerzo",
-        especificacion: "Vegano",
+        tipo: "Vegano",
+        categoria: "almuerzos",
         comensales: 6,
     },
 ];

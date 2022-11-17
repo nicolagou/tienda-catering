@@ -1,15 +1,25 @@
 import { useEffect, useState } from 'react';
 import { data } from '../../data/data';
-
 import ItemList from '../../components/ItemList/ItemList';
+import { useParams } from 'react-router-dom';
 import './ItemListContainer.css';
 
 const ItemListContainer = () => {
   const [productList, setProductList] = useState([]);
+  const {categoryName} = useParams();
+ 
 
   const getProducts = new Promise((resolve, reject) => {
-  setTimeout(() => {
-      resolve(data)
+    setTimeout(() => {
+    if (categoryName) {
+      const filteredData = data.filter((item)=>{
+        return item.categoria === categoryName;
+      });
+      console.log(filteredData);
+      resolve(filteredData);
+    } else {
+      resolve(data);
+    }
   }, 2000);    
   }); 
 
@@ -17,8 +27,8 @@ const ItemListContainer = () => {
       getProducts.then((respuesta)=>{
         setProductList(respuesta);
       });
-      // eslint-disable-next-line
-  }, []);
+
+  }, [categoryName]);
 
   return (
     <div className='message-greeting-container'> 

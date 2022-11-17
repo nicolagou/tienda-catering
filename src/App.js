@@ -2,8 +2,8 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './Pages/ItemsListContainer/ItemListContainer';
 import ItemDetailContainer from './Pages/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
 import CartWidget from './Pages/CartWidget/CartWidget';
+import './App.css';
 
 function App() {
   return (
@@ -11,8 +11,9 @@ function App() {
       <NavBar />
       <Routes>
         <Route path='/' element={<ItemListContainer/>}/> 
-        <Route path='item' element={<ItemDetailContainer />} /> 
-        <Route path='cart' element={<CartWidget />} /> 
+        <Route path='/category/:categoryName' element={<ItemListContainer />} /> 
+
+        <Route path='cart' element={<CartWidget />}/> 
           
 
        
