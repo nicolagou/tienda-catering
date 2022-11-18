@@ -19,9 +19,10 @@ const ItemDetailContainer = () => {
   });
 
   useEffect(() => {
-    getProduct.then((respuesta) => {
-      setProduct(respuesta);
-    });
+    getProduct
+    .then((respuesta) => setProduct(respuesta))
+    .catch(error => console.log(error))
+      ;
   }, [id]);
 
   return (
