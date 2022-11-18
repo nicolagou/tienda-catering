@@ -12,6 +12,7 @@ export const data = [
         tipo: "General",
         categoria: 'almuerzos',
         comensales: 5,
+        descripcion:"El almuerzo incluye batatas y papas",
     },
 
     {
@@ -21,6 +22,7 @@ export const data = [
         tipo: "General",
         categoria: "almuerzos",
         comensales: 5,
+        descripcion:"El almuerzo incluye menu se pasos",
     },
 
     {
@@ -30,6 +32,7 @@ export const data = [
         tipo: "Celiacos",
         categoria: "desayunos",
         comensales: 5,
+        descripcion:"El desayuno es apto celiacos",
     },
 
     {
@@ -39,6 +42,7 @@ export const data = [
         tipo: "General",
         categoria: "desayunos",
         comensales: 5,
+        descripcion:"El desayuno es completo, dulce y salados",
     },
 
     {
@@ -48,5 +52,6 @@ export const data = [
         tipo: "Vegano",
         categoria: "almuerzos",
         comensales: 6,
+        descripcion:"El almuerzo es apto vegano",
     },
 ];

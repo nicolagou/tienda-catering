@@ -5,25 +5,25 @@ import { useParams } from 'react-router-dom';
 import './ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
-  const { id } = useParams();
   const [product, setProduct] = useState();
+  const { id } = useParams();
 
 
-  const getProduct = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const filteredProduct = data.filter((producto) => {
-        return producto.id == id;
-      });
-      resolve(filteredProduct)
-    }, 1000);
-  });
+  const getProduct = () => {
+    const filteredProduct = data.filter((producto) => {
+      return producto.id == id;
+    });
+    setProduct(...filteredProduct);
+  };
+
+
+  console.log(product);
 
   useEffect(() => {
-    getProduct
-    .then((respuesta) => setProduct(respuesta))
-    .catch(error => console.log(error))
-      ;
+    getProduct();
   }, [id]);
+
+
 
   return (
     <div className='message-greeting-container'>

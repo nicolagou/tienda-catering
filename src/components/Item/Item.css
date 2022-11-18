@@ -6,7 +6,8 @@
     border: black solid 1px;
     border-radius: 15px;
     font-size: 12px;
-    
+    margin: 5px;
+   
 }
 
 img {
@@ -14,3 +15,4 @@ img {
     height: auto;
 
 }
+

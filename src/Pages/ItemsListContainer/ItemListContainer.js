@@ -15,7 +15,6 @@ const ItemListContainer = () => {
       const filteredData = data.filter((item)=>{
         return item.categoria === categoryName;
       });
-      console.log(filteredData);
       resolve(filteredData);
     } else {
       resolve(data);

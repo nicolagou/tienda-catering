@@ -32,7 +32,8 @@
 }
 
 .active {
-    color: red;
+    color: burlywood;
+    font-size: 24px;
 }
 
 .inactive {
