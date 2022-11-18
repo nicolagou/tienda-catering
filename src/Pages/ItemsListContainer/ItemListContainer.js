@@ -24,10 +24,10 @@ const ItemListContainer = () => {
   }); 
 
   useEffect(() => {
-      getProducts.then((respuesta)=>{
-        setProductList(respuesta);
-      });
-
+      getProducts
+      .then((respuesta)=>setProductList(respuesta))
+      .catch(error => console.log(error))
+      ;
   }, [categoryName]);
 
   return (
