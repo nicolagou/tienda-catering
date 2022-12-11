@@ -1,33 +1,31 @@
-import { useState } from "react"
 import './ItemCount.css'
 
-const ItemCount = () => {
-    const [contador, setContador] = useState(0);
+const ItemCount = ({setContador}) => {
 
-    const add = () => {
-        if (contador >= 10) {
-            return;
-        }
-        setContador(contador + 1)
+    const addItem = () => {
+        setContador((currentValue)=>currentValue + 1)
     }
 
-    const subtract = () => {
-        if (contador === 0) {
-            return;
-        }
-        setContador(contador - 1)
-    }
+    const removeItem = () => {
+        setContador((currentValue)=>{
+            if (currentValue > 0){
+                return currentValue - 1;
+            }else{
+                return currentValue;
+            }
+            
+        });
+    };
 
     return (
         <div>
             <div className="contador">
-                <button onClick={add}>+</button>
-                <h1>{contador}</h1>
-                <button onClick={subtract}>-</button>
+                <button onClick={addItem}>+</button>
+                <button onClick={removeItem}>-</button>
             </div>
 
         </div>
     )
 }
 
-export default ItemCount
+export default ItemCount;
