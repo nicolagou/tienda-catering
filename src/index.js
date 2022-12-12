@@ -4,6 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCc1GfxXXQ11o9qdtiIDCGtMy9_nw40a8c",
+  authDomain: "ecommerce-catering.firebaseapp.com",
+  projectId: "ecommerce-catering",
+  storageBucket: "ecommerce-catering.appspot.com",
+  messagingSenderId: "471011365979",
+  appId: "1:471011365979:web:eaba1d6ea010c1af2ddb7e"
+};
+
+// Initialize Firebase
+// eslint-disable-next-line
+const app = initializeApp(firebaseConfig);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  

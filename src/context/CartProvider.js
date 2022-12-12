@@ -7,11 +7,11 @@ const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
 
-    const addToCart = (product, quantity) => {
-        setCart([...cart, { ...product, quantity }]);
+    const addToCart = (item, quantity) => {
+        setCart([...cart, { ...item, quantity }]);
     };
 
-    // const removeItem = 
+    // const removeItem = (itemId) => {    }; 
 
     const clear = ()=>{
         setCart([]);

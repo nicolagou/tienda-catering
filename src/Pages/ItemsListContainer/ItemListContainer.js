@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { data } from '../../data/data';
 import ItemList from '../../components/ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore';
 import './ItemListContainer.css';
 
 const ItemListContainer = () => {
@@ -9,31 +9,42 @@ const ItemListContainer = () => {
   const {categoryName} = useParams();
  
 
-  const getProducts = new Promise((resolve, reject) => {
-    setTimeout(() => {
-    if (categoryName) {
-      const filteredData = data.filter((item)=>{
-        return item.categoria === categoryName;
+  const getProducts = () => {
+    const db = getFirestore();
+    const querySnapShot = collection(db, "items");
+    if (categoryName){
+      const queryFilter = query(querySnapShot, where( "categoryId", "==", categoryName));
+      getDocs(queryFilter)
+      .then((response)=>{
+        const data = response.docs.map((item) =>{
+          return {id: item.id, ...item.data()};
+        });
+        setProductList(data);
+      })
+      .catch((error)=>{console.log(error)})
+    } else{
+          getDocs(querySnapShot)
+    .then((response)=>{
+      const data = response.docs.map((item) =>{
+        return {id: item.id, ...item.data()};
       });
-      resolve(filteredData);
-    } else {
-      resolve(data);
+      setProductList(data);
+    })
+    .catch((error)=>{console.log(error)})
     }
-  }, 2000);    
-  }); 
+
+
+  }; 
 
   useEffect(() => {
-      getProducts
-      .then((respuesta)=>setProductList(respuesta))
-      .catch(error => console.log(error))
-      ;
+      getProducts();
+      // eslint-disable-next-line
   }, [categoryName]);
 
   return (
     <div className='message-greeting-container'> 
-        {/* <h2 className='message'>{props.name}</h2> */}
         <ItemList productList={productList}/>
-        
+   
     </div>    
   )
 }
