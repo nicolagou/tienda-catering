@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { data } from "../../data/data";
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
+import {doc, getDoc, getFirestore} from 'firebase/firestore';
 import './ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
@@ -10,17 +10,21 @@ const ItemDetailContainer = () => {
 
 
   const getProduct = () => {
-    const filteredProduct = data.filter((producto) => {
-      return producto.id == id;
-    });
-    setProduct(...filteredProduct);
-  };
+    const db = getFirestore();
+    const query = doc(db, "items", id)
+    getDoc(query)
+    .then(response=>{
+      setProduct({id: response.id, ...response.data()});
+    })
+    .catch(error=>console.log(error))
+    };
 
 
   console.log(product);
 
   useEffect(() => {
     getProduct();
+         // eslint-disable-next-line
   }, [id]);
 
 

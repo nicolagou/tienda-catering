@@ -12,10 +12,10 @@ const ItemDetail = ({producto}) => {
   return (
     <div className="card">
       <h1>Esto es la cantidad de productos en tu carrito {cart.length}</h1>
-      <img alt={producto.nombre} src={producto.imagen}/>
-      <h2>Nombre: {producto.nombre}</h2>
-      <h2>Comensales: {producto.comensales}</h2>
-      <h2>Descripcion: {producto.descripcion}</h2>
+      <img alt={producto.title} src={`/images/${producto.imageId}`}/>
+      <h2>Nombre: {producto.title}</h2>
+      <h2>Descripcion: {producto.description}</h2>
+      <h2>Stock: {producto.stock}</h2>
       <h2>{contador}</h2>
       <ItemCount setContador={setContador}/>
       {/* <Link to="/cart"> */}
