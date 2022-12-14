@@ -5,9 +5,9 @@ import { cartContext } from "../../context/CartProvider";
 import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({producto}) => {
-  const [contador, setContador] = useState(0);
+  const [contador, setContador] = useState(1);
   const {cart, addToCart, clear} = useContext(cartContext);
-  console.log(cart);
+console.log(cart);
 
   return (
     <div className="card">
