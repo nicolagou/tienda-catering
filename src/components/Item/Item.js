@@ -9,9 +9,9 @@ const Item = ({ producto }) => {
       <div className="card">
         <img alt={producto.imagenId} src={`/images/${producto.imageId}`}/>
         <h2>Nombre: {producto.title}</h2>
-        <h2>Tipo: {producto.description}</h2>
-        <h2>Categoria: {producto.price}</h2>
-        <h2>Comensales: {producto.stock}</h2>
+        <h2>Descripcion: {producto.description}</h2>
+        <h2>Precio: {producto.price}</h2>
+        <h2>Stock: {producto.stock}</h2>
 
       </div>
     </Link>

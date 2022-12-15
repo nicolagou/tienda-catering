@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { cartContext } from '../../context/CartProvider';
-import { collection, addDoc, getFirestore } from "firebase/firestore";
+import { collection, addDoc, getFirestore, doc, updateDoc } from "firebase/firestore";
 
 
 const Cart = () => {
@@ -24,8 +24,19 @@ const Cart = () => {
             total: total,
         };
         addDoc(query, newOrder)
-        .then((response)=>alert(`Orden creada con el id: ${response.id}`))
-        .catch((error)=>console.log(error));
+            .then((response) => {
+                alert(`Orden creada con el id: ${response.id}`)
+                return(response)
+            })
+            .then((res) => {
+                cart.forEach((product) => {
+                    const query = doc (db, "items",product.id);
+                    updateDoc(query, {
+                        stock: product.stock - product.quantity,
+                    })
+                });
+            })
+            .catch((error) => console.log(error));
 
     };
 

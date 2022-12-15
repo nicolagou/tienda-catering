@@ -15,6 +15,7 @@ console.log(cart);
       <img alt={producto.title} src={`/images/${producto.imageId}`}/>
       <h2>Nombre: {producto.title}</h2>
       <h2>Descripcion: {producto.description}</h2>
+      <h2>Precio: {producto.price}</h2>
       <h2>Stock: {producto.stock}</h2>
       <h2>{contador}</h2>
       <ItemCount setContador={setContador}/>
