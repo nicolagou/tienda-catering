@@ -17,14 +17,14 @@ const CartProvider = ({ children }) => {
         }
     };
 
-    // const removeItem = (itemId) => {    }; 
+    const removeItem = (itemId) => setCart(cart.filter((item) =>  item.id !== itemId)); 
 
     const clear = ()=>{
         setCart([]);
     };
 
     return (
-        <cartContext.Provider value={{ cart, addToCart, clear }}>
+        <cartContext.Provider value={{ cart, addToCart, clear ,removeItem}}>
             {children}
         </cartContext.Provider>
     )

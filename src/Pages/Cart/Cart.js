@@ -5,7 +5,7 @@ import moment from "moment";
 
 
 const Cart = () => {
-    const { cart , clear} = useContext(cartContext);
+    const { cart , clear, removeItem} = useContext(cartContext);
     const [total, setTotal] = useState(0);
     const [formValues, setFormValues] = useState({
         name:"",
@@ -65,6 +65,7 @@ const Cart = () => {
                     <img alt={product.title} src={`/images/${product.imageId}`} />
                     <h2>{product.title}</h2>
                     <h2>{product.description}</h2>
+                    <button onClick={() => removeItem(product.id)}>Eliminar producto</button>
                 </div>
             ))}
             <div>
