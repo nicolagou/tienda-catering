@@ -5,7 +5,7 @@ import moment from "moment";
 
 
 const Cart = () => {
-    const { cart } = useContext(cartContext);
+    const { cart , clear} = useContext(cartContext);
     const [total, setTotal] = useState(0);
     const [formValues, setFormValues] = useState({
         name:"",
@@ -63,15 +63,16 @@ const Cart = () => {
             {cart.map((product) => (
                 <div className="card" kew={product.id}>
                     <img alt={product.title} src={`/images/${product.imageId}`} />
-                    <h2>Nombre: {product.title}</h2>
-                    <h2>Descripcion: {product.description}</h2>
+                    <h2>{product.title}</h2>
+                    <h2>{product.description}</h2>
                 </div>
             ))}
             <div>
                 <h1>Total: {total}</h1>
                 <button onClick={createOrder}>Crear Orden</button>
+                <button onClick={() => clear()}>Vaciar Carrito</button>
                 <div>
-                    <h2>Formulario</h2>
+                    <h2>Formulario con datos del comprador:</h2>
                     <input name="name" type="text" placeholder="Nombre" value={formValues.name} onChange={handleInputChange}/>
                     <input name="phone" type="text" placeholder="Telefono" value={formValues.phone} onChange={handleInputChange}/>
                     <input name="email" type="text" placeholder="Email" value={formValues.email} onChange={handleInputChange}/>
