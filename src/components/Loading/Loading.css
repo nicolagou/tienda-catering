@@ -1,0 +1,13 @@
+.loadingPadre{
+height: 100px;
+position: relative;
+}
+
+.loadingHijo{
+margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: (-50%,-50%);
+translate: (-50%,-50%);
+}
