@@ -1,3 +1,6 @@
+Este sitio web es un Ecommerce de venta de Servicio de Catering, donde se pueden encontrar varios tipo de servicios que se pueden contratar.
+Se han utilizado para la creacion del mismo las librerias de React js conectado con Firebase y con la libreria de estilos ReactBootstrap.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
