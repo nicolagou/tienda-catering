@@ -5,16 +5,24 @@ import './Item.css';
 
 const Item = ({ producto }) => {
   return (
-    <Link to={`/item/${producto.id}`}>
-      <div className="card">
-        <img alt={producto.imagenId} src={`/images/${producto.imageId}`}/>
-        <h2>Nombre: {producto.title}</h2>
-        <h2>Descripcion: {producto.description}</h2>
-        <h2>Precio: {producto.price}</h2>
-        <h2>Stock: {producto.stock}</h2>
 
+    <div className="card">
+      <div className='ladoArriba'>
+        <img alt={producto.title} src={`/images/${producto.imageId}`} />
       </div>
-    </Link>
+      <div className='ladoAbajo'>
+        <div>
+        <h2>{producto.title}</h2>
+        </div>
+        <p>Descripcion: {producto.description}</p>
+        <p>Precio: ${producto.price}</p>
+        <p>Stock: {producto.stock}</p>
+        <Link to={`/item/${producto.id}`}>
+          <button>Ver Detalle</button>
+        </Link>
+      </div>
+    </div>
+
   );
 };
 

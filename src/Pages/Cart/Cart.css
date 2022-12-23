@@ -1,0 +1,99 @@
+.cartPadre{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+/* 
+.cardCart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: black solid 1px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin: 5px;
+}
+
+.cardText{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    padding: 10px;
+    font-size: 20px;
+    margin: 5px;
+} */
+
+/* img {
+    width: 180px;
+    height: auto;
+
+} */
+
+
+h2 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .tarjeta {
+    max-width: 65vw;
+    margin: 12px auto;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid black;
+    overflow: hidden;
+  }
+  .contenido {
+    display: flex;
+  }
+  @media (max-width: 768px){
+    .contenido{
+    flex-direction: column;
+    }
+    .tarjeta {
+     max-width: 95vw;
+    }
+  }
+  .ladoIzq, .ladoDer {
+    width: 100%;
+  }
+  .ladoDer img {
+    width: 100%;
+    height: 100%;
+    border-style: none;
+  }
+  .ladoIzq {
+    background: white;
+    padding: 48px
+  }
+
+  .cuerpo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* .btn {
+    display: inline-block;
+    background: white;
+    margin-right: 4px;
+    padding: 14px;
+    border-radius: 5px;
+    margin-top: 18px;
+  }
+  a.btn{
+     text-decoration: none;
+  }
+  a.btn:first-of-type {
+     background: #5252b4;
+     color: white;
+  }
+  a.btn:hover{
+     opacity: 0.8;
+  } */

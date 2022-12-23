@@ -1,6 +1,5 @@
 
 import { useState, useContext } from "react"
-// import { Link } from "react-router-dom";
 import { cartContext } from "../../context/CartProvider";
 import ItemCount from '../ItemCount/ItemCount';
 
@@ -11,17 +10,18 @@ const ItemDetail = ({ producto }) => {
 
   return (
     <div className="card">
-      <img alt={producto.title} src={`/images/${producto.imageId}`} />
-      <h2>Nombre: {producto.title}</h2>
-      <h2>Descripcion: {producto.description}</h2>
-      <h2>Precio: {producto.price}</h2>
-      <h2>Stock: {producto.stock}</h2>
-      <h2>{contador}</h2>
+      <div className='ladoArriba'>
+        <img alt={producto.title} src={`/images/${producto.imageId}`} />
+      </div>
+      <div className='ladoAbajo'>
+      <p>Nombre: {producto.title}</p>
+      <p>Descripcion: {producto.description}</p>
+      <p>Precio: {producto.price}</p>
+      <p>Stock: {producto.stock}</p>
+      <p>{contador}</p>
       <ItemCount setContador={setContador} />
-      {/* <Link to="/cart"> */}
       <button onClick={() => addToCart(producto, contador)}>Agregar al carrito</button>
-      {/* </Link> */}
-   
+      </div>
     </div>
   );
 };

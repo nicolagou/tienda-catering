@@ -1,18 +1,45 @@
 .card {
     display: flex;
     flex-direction: column;
+    width: 300px;
     align-items: center;
-    padding: 10px;
+    justify-content: space-between;
     border: black solid 1px;
     border-radius: 15px;
-    font-size: 12px;
     margin: 5px;
-   
+    padding-bottom: 10px;
+    overflow: hidden;
 }
 
-img {
-    width: 180px;
-    height: auto;
+.ladoArriba,
+.ladoAbajo {
+    width: 100%;
+}
+
+.ladoAbajo {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ladoArriba img {
+    width: 100%;
+    height: 100%;
+
+}
+h2 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+p {
+    font-size: 20px;
+    text-align: center;
 
 }
 
