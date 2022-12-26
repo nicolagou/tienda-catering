@@ -5,7 +5,7 @@ import './NavBar.css'
 const NavBar = () => {
   return (
     <div className='menu-navbar-container'>
-      <h1 className='menu-title'>Mi Tienda Online</h1>
+      <NavLink to="/" className='menu-title'>Mi Tienda Online</NavLink>
       <ul className='menu-items'>
         <li>
           <NavLink to="/" className='menu-list'>Productos</NavLink>

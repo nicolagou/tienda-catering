@@ -29,8 +29,6 @@ const ItemDetailContainer = () => {
     };
 
 
-  console.log(product);
-
   useEffect(() => {
     getProduct();
     cambiarEstado();

@@ -13,6 +13,7 @@
     margin-left: 10px;
     color: white;
     font-size: 35px;
+    text-decoration: none;
 }
 
 .menu-items {
@@ -33,9 +34,9 @@
 
 .active {
     color: burlywood;
-    font-size: 24px;
+
 }
 
 .inactive {
-    color: blue;
+    color: white;
 }

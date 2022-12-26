@@ -62,8 +62,8 @@ const Cart = () => {
     return (
         <div className='cartPadre'>
             {cart.map((product) => (
-                <div className="tarjeta">
-                    <div className="contenido" kew={product.id}>
+                <div className="tarjeta" kew={product.id}>
+                    <div className="contenido" >
                         <div className="ladoIzq">
                             <h2 className="titulo">{product.title}</h2>
                             <div className="cuerpo">
